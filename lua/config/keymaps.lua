@@ -12,15 +12,15 @@ map("v", "<", "<gv", { desc = "Indent Left" })
 map("v", ">", ">gv", { desc = "Indent Right" })
 
 -- LSP
-map("n", "gD", vim.lsp.buf.declaration, {desc = "LSP - Go to declaration"})
-map("n", "gd", vim.lsp.buf.definition, 	{desc = "LSP - Go to definition"})
-map('n', 'gh', vim.lsp.buf.hover, 		{desc = "LSP - Hover definition"})
+map("n", "gD", vim.lsp.buf.declaration, { desc = "LSP - Go to declaration" })
+map("n", "gd", vim.lsp.buf.definition, { desc = "LSP - Go to definition" })
+map("n", "gh", vim.lsp.buf.hover, { desc = "LSP - Hover definition" })
 
 -- Clear search highlights
 map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- Visual block
-map("n", "<C-b>", "<C-v>", { noremap = true, desc = "Enter visual-block mode"})
+map("n", "<C-b>", "<C-v>", { noremap = true, desc = "Enter visual-block mode" })
 
 -- Redo
 --map("n", "U", "<C-r>", { noremap = true, desc = "Redo" })
@@ -48,9 +48,9 @@ map("t", "<C-j>", "<C-\\><C-N><C-w>j", { desc = "switch window down" })
 map("t", "<C-k>", "<C-\\><C-N><C-w>k", { desc = "switch window up" })
 
 -- Cursor
-map({"n", "v"}, "q", 	 "b", 		{ noremap = true, desc = "Jump backwards to start of a word" })
-map({"n", "v"}, "<S-q>", "<ESC>^", 	{ desc = "Move cursor to start of line" })
-map({"n", "v"}, "<S-e>", "<End>", 	{ desc = "Move cursor to end of line" })
+map({ "n", "v" }, "q", "b", { noremap = true, desc = "Jump backwards to start of a word" })
+map({ "n", "v" }, "<S-q>", "<ESC>^", { desc = "Move cursor to start of line" })
+map({ "n", "v" }, "<S-e>", "<End>", { desc = "Move cursor to end of line" })
 
 -- Prevent Typo with Q and W aliases
 vim.cmd([[
@@ -64,11 +64,15 @@ cnoreabbrev <expr> wQ ((getcmdtype() is# ':' && getcmdline() is# 'wQ') ? 'wQ' : 
 
 --- Plugin Keymaps ---
 -- Toggle File Tree
---map("n", "<leader>e", "<Cmd>NeotreeSplit<CR>" , { desc = "Toggle File Explorer" })
-map("n", "<leader>e", "<Cmd>Neotree toggle reveal source=filesystem position=left<CR>", { desc = "Toggle File Explorer" })
-map("n", "<leader>b", "<Cmd>Neotree toggle reveal source=buffers position=right<CR>", 	{ desc = "Toggle Buffer List" })
+map(
+    "n",
+    "<leader>e",
+    "<Cmd>Neotree toggle reveal source=filesystem position=left<CR>",
+    { desc = "Toggle File Explorer" }
+)
+map("n", "<leader>b", "<Cmd>Neotree toggle reveal source=buffers position=right<CR>", { desc = "Toggle Buffer List" })
 
 -- Toggle terminal
 map("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })
 map("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle Terminal (Floating)" })
-map("n", "<C-t>", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" } )
+map("n", "<C-t>", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })

@@ -1,6 +1,6 @@
 --- System ---
 -- Enable mouse mode (can be useful for resizing splits)
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 -- Save undo history
 vim.o.undofile = true
 -- Number of commands to remember
@@ -12,7 +12,7 @@ vim.opt.timeoutlen = 500
 -- Length of time to wait before triggering the plugin
 vim.opt.updatetime = 300
 -- Hide blank characters
-vim.opt.fillchars = {eob = " "}
+vim.opt.fillchars = { eob = " " }
 -- Allow external config
 vim.opt.exrc = true
 -- Swapfile
@@ -42,10 +42,10 @@ vim.o.termguicolors = true
 vim.o.background = "dark"
 -- Displays sign column in number column when needed
 vim.o.signcolumn = "yes"
--- Set floating window border 
+-- Set floating window border
 vim.o.winborder = "shadow"
 -- Preview substitutions live as you type
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
@@ -55,7 +55,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 -- Set column width to 2 digits
 vim.o.numberwidth = 2
--- Only last window has status line 
+-- Only last window has status line
 vim.o.laststatus = 3
 -- Disable show mode (it's already on the status line)
 vim.o.showmode = false
@@ -92,6 +92,6 @@ vim.o.whichwrap = "<>[]hl"
 vim.o.smartcase = true
 
 --- LSP ---
-vim.diagnostic.config {
-	update_in_insert = true
-}
+vim.diagnostic.config({
+    update_in_insert = true,
+})
