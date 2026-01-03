@@ -18,7 +18,7 @@ vim.diagnostic.config({
     },
     severity_sort = true,
     float = {
-        border = "single",
+        border = "bold",
         source = "if_many",
     },
     jump = { float = true },
@@ -49,9 +49,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.lsp.enable({
     "lua_ls",
     "clangd",
-    -- "cssls",
-    -- "html",
-    -- "ts_ls",
+    "ts_ls",
+    "cssls",
+    "html",
     -- "basedpyright",
     -- "bashls",
     -- "jsonls",

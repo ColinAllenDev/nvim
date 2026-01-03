@@ -7,10 +7,11 @@ return {
     },
     lazy = false,
     opts = {
+    	hide_root_node = true,
         open_files_do_not_replace_types = { "terminal", "Trouble", "edgy" },
         auto_clean_after_session_restore = true,
         close_if_last_window = true,
-        popup_border_style = "NC",
+        popup_border_style = "",
         enable_git_status = false,
         git_status_async = false,
         sources = { "filesystem", "buffers", "document_symbols" },
@@ -54,12 +55,11 @@ return {
         },
         filesystem = {
             window = {
-                position = "left",
                 width = 30,
                 mapping_options = { noremap = true, nowait = true },
                 mappings = {
                     ["O"] = "system_open",
-                    ["p"] = { "toggle_preview", config = { use_float = true } },
+                    ["v"] = { "toggle_preview", config = { use_float = true } },
                     ["<C-S-j>"] = { "scroll_preview", config = { direction = -10 } },
                     ["<C-S-k>"] = { "scroll_preview", config = { direction = 10 } },
                     ["<C-r>"] = "refresh",

@@ -10,8 +10,9 @@ return {
             	bold = true,
         	},
         	style = {
-        		FloatBorder = { fg = "#FFAA54", bg = "NONE" },
         	 	WinSeparator = { fg = "#767C77" },
+        		FloatBorder = { fg = "#FFAA54", bg = "NONE" },
+        		NeoTreeTitleBar = { bg = "#FFAA54" },
         	}
         })
     	-- Set colorscheme

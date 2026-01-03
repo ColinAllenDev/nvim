@@ -24,7 +24,7 @@ return {
         },
         completion = {
             list = {
-                selection = { preselect = false, auto_insert = true },
+                selection = { preselect = true, auto_insert = true },
             },
             accept = {
                 auto_brackets = {
@@ -34,16 +34,19 @@ return {
             menu = {
                 border = "bold",
                 draw = {
+                	padding = { 0, 1 },
                     columns = {
-                        { "kind_icon" },
-                        { "label", "kind", gap = 1 },
+                        { "label", "label_description", gap = 1 },
+                        { "kind_icon", "kind" },
                     },
                 },
             },
             documentation = {
                 auto_show = true,
-                window = { border = "bold" },
+                auto_show_delay_ms = 100,
+                window = { border = "bold", position = "right" },
             },
+            ghost_text = { enabled = false },
         },
         appearance = {
             kind_icons = require("ui.icons").kind,
@@ -51,6 +54,8 @@ return {
         keymap = {
             preset = "enter",
             ["<C-y>"] = { "select_and_accept" },
+            ["<C-j>"] = { "select_next", 'fallback' },
+            ["<C-k>"] = { "select_prev", 'fallback' },
         },
         cmdline = { 
         	keymap = {

@@ -2,6 +2,20 @@ local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local usercmd = vim.api.nvim_create_user_command
 
+-- Disable semantic highlighting
+vim.api.nvim_create_autocmd('LspAttach', {
+  desc = 'Disable LSP semantic highlights',
+  callback = function(event)
+    local id = vim.tbl_get(event, 'data', 'client_id')
+    local client = id and vim.lsp.get_client_by_id(id)
+    if client == nil then
+      return
+    end
+
+    client.server_capabilities.semanticTokensProvider = nil
+  end,
+})
+
 -- Rebalance Splits
 autocmd("VimResized", {
     callback = function()

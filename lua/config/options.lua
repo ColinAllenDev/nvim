@@ -42,8 +42,6 @@ vim.o.termguicolors = true
 vim.o.background = "dark"
 -- Displays sign column in number column when needed
 vim.o.signcolumn = "yes"
--- Set floating window border
-vim.o.winborder = "shadow"
 -- Preview substitutions live as you type
 vim.o.inccommand = "split"
 -- Show which line your cursor is on

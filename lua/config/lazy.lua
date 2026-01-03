@@ -25,7 +25,7 @@ require("lazy").setup({
     install = { colorscheme = { "citruszest" } },
     change_detection = { enabled = false, notify = false },
     ui = {
-        border = "rounded",
+        border = "bold",
         icons = {
             cmd = icons.ui.BoxChecked,
             config = icons.ui.Gear,

@@ -67,7 +67,7 @@ cnoreabbrev <expr> wQ ((getcmdtype() is# ':' && getcmdline() is# 'wQ') ? 'wQ' : 
 map(
     "n",
     "<leader>e",
-    "<Cmd>Neotree toggle reveal source=filesystem position=left<CR>",
+    "<Cmd>Neotree toggle source=filesystem<CR>",
     { desc = "Toggle File Explorer" }
 )
 map("n", "<leader>b", "<Cmd>Neotree toggle reveal source=buffers position=right<CR>", { desc = "Toggle Buffer List" })
