@@ -2,6 +2,7 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
+	{ "MunifTanjim/nui.nvim" },
         { "antosha417/nvim-lsp-file-operations", opts = {} },
         { "s1n7ax/nvim-window-picker", opts = {} },
     },

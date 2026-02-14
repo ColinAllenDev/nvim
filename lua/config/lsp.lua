@@ -21,7 +21,7 @@ vim.diagnostic.config({
         border = "bold",
         source = "if_many",
     },
-    jump = { float = true },
+    jump = { on_jump = true },
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
